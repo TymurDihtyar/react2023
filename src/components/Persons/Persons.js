@@ -5,12 +5,12 @@ import {useEffect, useState} from "react";
 import './Persons.css';
 
 const Persons = () => {
-   const [items, setItems] = useState([])
+    const [items, setItems] = useState([])
     useEffect(() => {
         fetch("https://rickandmortyapi.com/api/character/1,2,3,4,5,6")
             .then(value => value.json())
             .then(items => setItems(items))
-    },[]);
+    }, []);
 
     return (
         <div className={'all'}>
