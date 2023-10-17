@@ -4,7 +4,6 @@ import './User.css'
 
 const User  = ({value}) => {
     const {name, surname, age, info, photo} = value
-    console.log(value);
     return (
         <div className = 'member'>
             <h2>{name} {surname} age:{age}</h2>
