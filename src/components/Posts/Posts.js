@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 
-import './Posts.module.css'
+import css from './Posts.module.css'
 import {Post} from "../Post/Post";
 import {postServise} from "../../servises/postServise";
 import {PostDetail} from "../PostDetail/PostDetail";
@@ -21,7 +21,7 @@ const Posts = () => {
 
     return (
         <div>
-            <div className={'allPosts'}>
+            <div className={css.allPosts}>
                 {posts.map(item => <Post key={item.id} item={item} click={click}/>)}
             </div>
             {

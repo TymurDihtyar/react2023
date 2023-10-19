@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './Post.module.css'
+import css from './Post.module.css'
 
 const Post = ({item, click}) => {
     const {id, title}= item;
     return (
-        <div className={'Post'}>
-            <h2>{id} {title}</h2>
-            <button onClick={()=>{click(id)}}>Details</button>
+        <div className={css.Post}>
+            <h3>{id}. {title.toUpperCase()}</h3>
+            <button className={css.but} onClick={()=>{click(id)}}>Details</button>
         </div>
     );
 };
