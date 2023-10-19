@@ -7,7 +7,7 @@ const Launch = ({item}) => {
     const {mission_patch_small} = links;
     return (
         <div className={css.Launch}>
-            <h3>Name: {mission_name}</h3>
+            <h3>Mission: <br/>{mission_name}</h3>
             <p>Launch: {launch_year}</p>
             <img src={mission_patch_small} alt={mission_name}/>
         </div>
