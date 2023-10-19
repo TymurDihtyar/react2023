@@ -13,9 +13,11 @@
     margin: 10px;
     width: calc(20% - 20px);
     height: 200px;
+    text-align: center;
 }
 h3 {
     margin: 0;
+    font-size: 18px;
 }
 
 .but {
