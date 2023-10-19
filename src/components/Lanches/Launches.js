@@ -16,7 +16,7 @@ const Launches = () => {
 
     return (
         <div className={css.Launches}>
-            {filterLaunch.map(item => <Launch key={item.id} item={item}/>)}
+            {filterLaunch.map(item => <Launch key={item.flight_number} item={item}/>)}
         </div>
     );
 };
