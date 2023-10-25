@@ -1,10 +1,16 @@
-import {Car} from "./Car";
+import {useState} from "react";
 
-const Cars = ({cars, setTriger}) => {
+import {Car} from "./Car";
+import {CarForm} from "./CarForm";
+
+const Cars = ({cars, refresh}) => {
+    const [carForUpdate, setCarForUpdate] = useState(null)
 
     return (
         <div>
-            {cars.map(item=> <Car key={item.id} item={item} setTriger={setTriger}/>)}
+            <CarForm refresh={refresh} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate}/>
+            <hr/>
+            {cars.map(item=> <Car key={item.id} item={item} refresh={refresh} setCarForUpdate={setCarForUpdate}/>)}
         </div>
     );
 };

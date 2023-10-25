@@ -5,7 +5,7 @@ import {Cars} from "./Cars";
 const CarsConteiner = () => {
     const [cars, setCars] = useState([])
     const [triger, setTriger] = useState(true)
-    // const refresh = setTriger(prev != prev)
+    const refresh = () => setTriger(prev => !prev)
 
     useEffect(() => {
         carsService.getAll().then(({data}) => setCars(data))
@@ -13,7 +13,7 @@ const CarsConteiner = () => {
 
     return (
         <div>
-            <Cars cars={cars} setTriger={setTriger}/>
+            <Cars cars={cars} refresh={refresh}/>
         </div>
     );
 };
