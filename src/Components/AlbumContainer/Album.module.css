@@ -1,7 +1,7 @@
-.todo {
+.album {
     width: calc(20% - 10px);
     font-family: "Agency FB", sans-serif;
-    background-color: #f1bebe;
+    background-color: #ecd18c;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;

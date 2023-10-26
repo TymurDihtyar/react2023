@@ -1,0 +1,14 @@
+.comment {
+    width: calc(20% - 10px);
+    font-family: "Agency FB", sans-serif;
+    background-color: #c6ec6c;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 5px;
+    text-align: center;
+}
