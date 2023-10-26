@@ -5,7 +5,7 @@ import css from './MainLayout.module.css'
 
 const MainLayout = () => {
     return (
-        <div className={css.Main}>
+        <div className={css.main}>
             <Header/>
             <Outlet/>
         </div>
