@@ -1,0 +1,14 @@
+.todo {
+    width: 200px;
+    font-family: "Agency FB", sans-serif;
+    background-color: #bbbbbb;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+    text-align: center;
+}
