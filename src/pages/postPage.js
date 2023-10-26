@@ -1,5 +1,6 @@
-import {PostContainer} from "../Components/PostContainer/PostContainer";
 import {useLocation} from "react-router-dom";
+
+import {PostContainer} from "../Components/PostContainer/PostContainer";
 
 const PostPage = () => {
     const {state:postId} = useLocation()

@@ -1,5 +1,6 @@
-import css from './Commet.module.css'
 import {useNavigate} from "react-router-dom";
+
+import css from './Commet.module.css'
 
 const Comment = ({item}) => {
     const navigate = useNavigate();
