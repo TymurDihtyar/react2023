@@ -1,5 +1,5 @@
-.comment {
-    width: calc(20% - 10px);
+.postt {
+    width: calc(100% - 10px);
     font-family: "Agency FB", sans-serif;
     background-color: #bece7f;
     padding: 10px;
