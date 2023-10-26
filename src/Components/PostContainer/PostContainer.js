@@ -3,7 +3,7 @@ import {postsService} from "../../services/postsService";
 import {Post} from "./Post";
 
 const PostContainer = ({postId}) => {
-    const [post, setPost] = useState(0);
+    const [post, setPost] = useState(null);
 
     useEffect(() => {
         postsService.getById(postId).then(({data}) => setPost(data))
@@ -11,7 +11,7 @@ const PostContainer = ({postId}) => {
 
     return (
         <div>
-            <Post post={post}/>
+            {post && <Post post={post}/>}
         </div>
     );
 };
