@@ -1,12 +1,13 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
 import {MainLayout} from "./layouts/MainLayout";
-import {PostOfCurrentUser} from "./Components/PostContainer/PostOfCurrentUser";
 import {PostDetails} from "./Components/PostContainer/PostDetails";
 import {CommentsOfPost} from "./Components/CommentsContainer/CommentsOfPost";
 import {UsersPage} from "./pages/UsersPage";
 import {userService} from "./services/userService";
 import {UserDetailsPage} from "./pages/UserDetailsPage";
+import {PostsUserPage} from "./pages/PostsUserPage";
+import {postService} from "./services/postService";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
             {path: 'users', element: <UsersPage/>, loader: () => userService.getAll()},
             {
                 path: 'users/:id', element: <UserDetailsPage/>, loader:({params:{id}})=> userService.getById(id), children: [
-                    {path: 'postOfCurrentUser', element: <PostOfCurrentUser/>}
+                    {path: 'posts', element: <PostsUserPage/>, loader: ({params:{id}})=> postService.getByUserId(id)}
                 ]
             },
             {

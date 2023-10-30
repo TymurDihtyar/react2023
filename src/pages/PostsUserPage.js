@@ -1,0 +1,15 @@
+import {PostOfCurrentUser} from "../Components/PostContainer/PostOfCurrentUser";
+import {useLoaderData} from "react-router-dom";
+import css from './PostUserPage.module.css'
+
+const PostsUserPage = () => {
+    const {data:posts} = useLoaderData()
+
+    return (
+        <div className={css.renderPosts}>
+            {posts.map(item => <PostOfCurrentUser key={item.id} item={item}/>)}
+        </div>
+    );
+};
+
+export {PostsUserPage};

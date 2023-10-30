@@ -1,0 +1,44 @@
+.userDetails {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1vh 1vh 1vh black;
+    background: linear-gradient(152deg, #bf8d39 0%, #000 100%);
+    width: 90%;
+}
+
+.userDetails div {
+    padding-left: 70px;
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.userBut {
+    margin: 20px 0 0 0;
+
+    font-family: monospace;
+    font-size: 25px;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1vh 1vh 1vh black;
+    background: linear-gradient(152deg, #f3f1f6 0%, #000 100%);
+
+    transition: 0.5s;
+
+    width: 90%;
+    height: 50px;
+}
+
+.userBut:hover {
+    background: linear-gradient(152deg, #bf8d39 0%, #000 100%);
+    color: white;
+    transform: translateY(-0.7vh);
+    transition: 0.5s;
+}

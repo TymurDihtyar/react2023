@@ -1,0 +1,38 @@
+.divPost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1vh 1vh 1vh black;
+    background: linear-gradient(152deg, #e4d5ef 0%, #000 100%);
+    color: white;
+    width: 16vw;
+}
+
+.userBut {
+    margin: 20px 0 0 0;
+
+    font-family: monospace;
+    font-size: 25px;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1vh 1vh 1vh black;
+    background: linear-gradient(152deg, #f3f1f6 0%, #000 100%);
+
+    transition: 0.5s;
+
+    width: 90%;
+    height: 50px;
+}
+
+.userBut:hover {
+    background: linear-gradient(152deg, #bf8d39 0%, #000 100%);
+    color: white;
+    transform: translateY(-0.7vh);
+    transition: 0.5s;
+}

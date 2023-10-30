@@ -1,13 +1,18 @@
 import {UserDetails} from "../Components/UsersContainer/UserDetails";
-import {useLoaderData} from "react-router-dom";
+import {Outlet, useLoaderData} from "react-router-dom";
+import css from './UserDetails.module.css'
 
 const UserDetailsPage = () => {
     const {data} = useLoaderData()
 
     return (
-        <div>
-            <UserDetails user={data}/>
-        </div>
+        <>
+            <h1>USER DETAILS</h1>
+            <div className={css.renderDetails}>
+                <UserDetails user={data}/>
+            </div>
+            <Outlet/>
+        </>
     );
 };
 
