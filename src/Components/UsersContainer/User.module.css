@@ -32,6 +32,7 @@ h1 {
 
 .userData {
     box-sizing: border-box;
+    align-items: center;
     font-family: monospace;
     font-size: 35px;
     font-weight: bold;
