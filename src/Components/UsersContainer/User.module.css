@@ -1,6 +1,9 @@
 h1 {
     background: linear-gradient(152deg, #bf8d39 0%, #000 100%);
+    display: flex;
+    justify-content: center;
     background-clip: text;
+    font-size: 50px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
