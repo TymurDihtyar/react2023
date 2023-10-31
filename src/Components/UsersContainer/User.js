@@ -9,7 +9,7 @@ const User = ({item}) => {
     return (
         <div className={css.userBlock}>
             <div className={css.userData}>#{id} - {name.toUpperCase()}</div>
-            <button className={css.userBut} onClick={() => navigate(`${id}`)}>Details</button>
+            <button className={css.userBut} onClick={() => navigate(`/users/${id}`)}>Details</button>
         </div>
     );
 };
