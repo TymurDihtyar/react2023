@@ -1,13 +1,17 @@
 import {PostDetails} from "../Components/PostContainer/PostDetails";
-import {useLoaderData} from "react-router-dom";
+import {Outlet, useLoaderData} from "react-router-dom";
 
 const PostDetailPage = () => {
     const {data} = useLoaderData()
-
+    console.log(data);
     return (
-        <div>
-            <PostDetails post={data}/>
-        </div>
+        <>
+            <h1>POST DETAILS</h1>
+            <div>
+                <PostDetails post={data}/>
+            </div>
+            <Outlet/>
+        </>
     );
 };
 

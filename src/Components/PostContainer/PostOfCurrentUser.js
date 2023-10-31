@@ -4,8 +4,7 @@ import {useNavigate} from "react-router-dom";
 const PostOfCurrentUser = ({item}) => {
     const {title, id} = item
     const navigate = useNavigate()
-
-    console.log(id);
+    
     return (
         <div className={css.divPost}>
             <h6>{title}</h6>
