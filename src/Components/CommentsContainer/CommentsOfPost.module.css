@@ -1,0 +1,16 @@
+.comDiv {
+    /*height: 30vh;*/
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1vh 1vh 1vh black;
+    background: linear-gradient(152deg, #e4d5ef 0%, #000 100%);
+    color: white;
+    width: 21vw;
+}

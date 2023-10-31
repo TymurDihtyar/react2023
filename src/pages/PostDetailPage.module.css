@@ -1,0 +1,11 @@
+.renderComments{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+    gap: 2vh;
+    width: 90%;
+    margin-left: 5%;
+}
+
