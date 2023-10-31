@@ -36,3 +36,13 @@
     transform: translateY(-0.7vh);
     transition: 0.5s;
 }
+
+h6 {
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 12vw;
+    font-size: 20px;
+}

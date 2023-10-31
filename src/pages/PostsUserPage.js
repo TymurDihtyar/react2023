@@ -1,6 +1,6 @@
 import {PostOfCurrentUser} from "../Components/PostContainer/PostOfCurrentUser";
 import {useLoaderData} from "react-router-dom";
-import css from './PostUserPage.module.css'
+import css from './PostsUserPage.module.css'
 
 const PostsUserPage = () => {
     const {data:posts} = useLoaderData()
