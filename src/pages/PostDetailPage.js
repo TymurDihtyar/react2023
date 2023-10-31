@@ -1,7 +1,7 @@
-import {PostDetails} from "../Components/PostContainer/PostDetails";
 import {useLoaderData} from "react-router-dom";
 import {useEffect, useState} from "react";
 
+import {PostDetails} from "../Components/PostContainer/PostDetails";
 import {commentService} from "../services/commentService";
 import {CommentsOfPost} from "../Components/CommentsContainer/CommentsOfPost";
 import css from './PostDetailPage.module.css'

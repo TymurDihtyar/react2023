@@ -1,5 +1,4 @@
 .comDiv {
-    /*height: 30vh;*/
     display: flex;
     justify-content: start;
     align-items: start;
@@ -13,4 +12,9 @@
     background: linear-gradient(152deg, #e4d5ef 0%, #000 100%);
     color: white;
     width: 21vw;
+}
+
+.comDiv div {
+    font-family: monospace;
+    font-size: 20px;
 }

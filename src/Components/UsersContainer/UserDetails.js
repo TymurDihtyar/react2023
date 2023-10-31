@@ -1,5 +1,6 @@
-import css from './UserDetails.module.css'
-import {Outlet, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+
+import css from './UserDetails.module.css';
 
 const UserDetails = ({user}) => {
     const {id, name, username, email, phone} = user
@@ -14,7 +15,7 @@ const UserDetails = ({user}) => {
                 <div>email: {email}</div>
                 <div>phone: {phone}</div>
             </div>
-            <button className={css.userBut} onClick={()=> navigate(`posts`)}>Post of current user</button>
+            <button className={css.userBut} onClick={() => navigate(`posts`)}>Post of current user</button>
         </>
     );
 };

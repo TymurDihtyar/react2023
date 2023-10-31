@@ -1,5 +1,6 @@
-import {Users} from "../Components/UsersContainer/Users";
 import {useLoaderData} from "react-router-dom";
+
+import {Users} from "../Components/UsersContainer/Users";
 
 const UsersPage = () => {
     const {data} = useLoaderData();

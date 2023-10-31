@@ -7,7 +7,7 @@ const Users = ({users}) => {
         <>
             <h1>USERS FROM JSONPLASEHOLDER</h1>
             <div className={css.render}>
-                {users.map(item=> <User key={item.id} item={item}/>)}
+                {users.map(item => <User key={item.id} item={item}/>)}
             </div>
         </>
     );

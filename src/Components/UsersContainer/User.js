@@ -1,5 +1,6 @@
-import css from './User.module.css'
 import {useNavigate} from "react-router-dom";
+
+import css from './User.module.css'
 
 const User = ({item}) => {
     const {id, name} = item;
