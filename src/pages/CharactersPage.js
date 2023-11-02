@@ -1,7 +1,14 @@
+import {useLocation} from "react-router-dom";
+import {Characters} from "../Components";
+
 const CharactersPage = () => {
+    const {state:{characters}} = useLocation()
+
+
+
     return (
         <div>
-            CharactersPage
+            <Characters characters={characters}/>
         </div>
     );
 };
