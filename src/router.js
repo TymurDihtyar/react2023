@@ -1,10 +1,8 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {MainLayOut} from "./layouts/MainLayOut";
-import {PublickLayOut} from "./layouts/PublickLayOut";
-import {LoginPage} from "./pages/LoginPage";
-import {RegisterPage} from "./pages/RegisterPage";
-import {AuthLayOut} from "./layouts/AuthLayOut";
-import {CarsPage} from "./pages/CarsPage";
+
+import {AuthLayOut, MainLayOut, PublickLayOut} from "./layouts";
+import {CarsPage, LoginPage, RegisterPage} from "./pages";
+
 
 let router = createBrowserRouter([
     {
