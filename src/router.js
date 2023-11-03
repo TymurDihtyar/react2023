@@ -7,7 +7,7 @@ import {CarsPage, LoginPage, RegisterPage} from "./pages";
 let router = createBrowserRouter([
     {
         path: '', element: <MainLayOut/>, children: [
-            {index: true, element: <Navigate to={'cars'}/>},
+            {index: true, element: <Navigate to={'login'}/>},
             {
                 element: <PublickLayOut/>, children: [
                     {path: 'login', element: <LoginPage/>},
