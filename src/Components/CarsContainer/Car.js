@@ -1,4 +1,4 @@
-const Car = ({car}) => {
+const Car = ({car, refresh}) => {
     const {id, brand, price, year}= car
     return (
         <div>

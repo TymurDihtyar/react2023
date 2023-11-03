@@ -5,17 +5,18 @@ import {CarForm} from "./CarForm";
 
 const Cars = () => {
     const [cars, setCars] = useState([])
-    const [reset, setReset] = useState();
+    const [reset, setReset] = useState(true);
+    // const refresh = setReset(prev=> !prev)
 
     useEffect(() => {
         carService.getAll().then(({data}) => setCars(data.items))
-    }, []);
+    }, [reset]);
 
     return (
         <div>
-            <CarForm/>
+            <CarForm refresh={refresh}/>
             <hr/>
-            {cars.map(car => <Car key={car.id} car={car}/>)}
+            {cars.map(car => <Car key={car.id} car={car} refresh={refresh}/>)}
         </div>
     );
 };

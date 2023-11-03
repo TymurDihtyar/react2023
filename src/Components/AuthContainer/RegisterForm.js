@@ -18,6 +18,7 @@ const RegisterForm = () => {
             await authService.register(user)
             setServerError(null)
             navigate('/login')
+            reset()
         } catch (e) {
             setServerError(e.response.data)
         }
