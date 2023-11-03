@@ -5,6 +5,7 @@ import {CarForm} from "./CarForm";
 
 const Cars = () => {
     const [cars, setCars] = useState([])
+    const [reset, setReset] = useState();
 
     useEffect(() => {
         carService.getAll().then(({data}) => setCars(data.items))
