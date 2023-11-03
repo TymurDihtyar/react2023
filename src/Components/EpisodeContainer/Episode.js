@@ -1,4 +1,4 @@
-import css from './Episode.module.css'
+import css from './Episode.module.css';
 import {useNavigate} from "react-router-dom";
 import {useAppContext} from "../../hooks/useAppContext";
 const Episode = ({item}) => {
