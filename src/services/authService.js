@@ -10,6 +10,10 @@ const authService = {
         this.setToken(access)
     },
 
+    me(){
+        return axiosService.get(urls.auth.me)
+    },
+
     setToken(token) {
         localStorage.setItem('token', token)
     },
