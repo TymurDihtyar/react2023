@@ -8,9 +8,10 @@ import {CarForm} from "./CarForm";
 const Cars = () => {
     const [cars, setCars] = useState([])
     const [reset, setReset] = useState(true);
-    const refresh = () => setReset(prev => !prev);
     const [query, setQuery] = useSearchParams({page: '1'});
     const [prevNext, setPrevNext] = useState({prev:null, next:null});
+    
+    const refresh = () => setReset(prev => !prev);
 
     useEffect(() => {
         carService.getAll(query.get('page')).then(({data}) => {
@@ -22,12 +23,14 @@ const Cars = () => {
     function prevCars() {
         setQuery(prev=> {
             prev.set('page', `${+prev.get('page')-1}`)
+            return prev
         })
     }
 
     function nextCars() {
         setQuery(prev=> {
             prev.set('page', `${+prev.get('page')+1}`)
+            return prev
         })
     }
 
