@@ -6,7 +6,7 @@ import {CarForm} from "./CarForm";
 const Cars = () => {
     const [cars, setCars] = useState([])
     const [reset, setReset] = useState(true);
-    // const refresh = setReset(prev=> !prev)
+    const refresh = () => setReset(prev=> !prev)
 
     useEffect(() => {
         carService.getAll().then(({data}) => setCars(data.items))
