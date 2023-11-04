@@ -2,6 +2,7 @@ import css from './Header.module.css'
 import {NavLink, useNavigate} from "react-router-dom";
 import {useAppContext} from "../../hooks/useApp Context";
 import {authService} from "../../services/authService";
+import CustomizedSwitches from "../Switch";
 
 const Header = () => {
     const {isAuth, me, setMe, setIsAuth} = useAppContext();
@@ -17,6 +18,7 @@ const Header = () => {
     return (
         <div className={css.Header}>
             <h2>Cars</h2>
+            <CustomizedSwitches/>
             {
                 isAuth ?
                     <div>
