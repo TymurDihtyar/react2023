@@ -9,7 +9,7 @@ const Car = ({car, refresh}) => {
             <div>brand: {brand}</div>
             <div>price: {price}</div>
             <div>year: {year}</div>
-            <Rating name="customized-10" defaultValue={data} precision={0.1} max={30} />
+            <Rating name="customized-10" defaultValue={data} precision={0.1} max={15} />
             <hr/>
         </div>
     );
