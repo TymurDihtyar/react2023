@@ -5,14 +5,14 @@ import {useEffect} from "react";
 import {carsService} from "../services/carsService";
 import {carValidator} from "../carValidator/carValidator";
 import {useDispatch, useSelector} from "react-redux";
-import {oneCarAction} from "../redux/slices/oneCarSlice";
+import {carsActions} from "../redux/slices/carSlice";
 
-const CarForm = ({refresh}) => {
+const CarForm = () => {
     const {reset, handleSubmit, register, formState: {errors, isValid}, setValue} = useForm({
         mode: "all",
         resolver: joiResolver(carValidator)
     })
-    const {oneCar} = useSelector(state => state.oneCar);
+    const {oneCar, triger} = useSelector(state => state.cars);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -25,13 +25,12 @@ const CarForm = ({refresh}) => {
 
     const save = async (car) => {
         await carsService.create(car)
-        refresh()
+        dispatch(carsActions.setTriger(!triger))
         reset()
     }
     const update = async (car) => {
         await carsService.update(oneCar.id, car)
-        refresh()
-        dispatch(oneCarAction.setOneCar(null))
+        dispatch(carsActions.setTriger(!triger))
         reset()
     }
 

@@ -1,13 +1,13 @@
 import {Car} from "./Car";
 import {CarForm} from "./CarForm";
 
-const Cars = ({cars, refresh}) => {
+const Cars = ({cars}) => {
 
     return (
         <div>
-            <CarForm refresh={refresh} />
+            <CarForm/>
             <hr/>
-            {cars.map(item=> <Car key={item.id} item={item} refresh={refresh} />)}
+            {cars.map(item=> <Car key={item.id} item={item}/>)}
         </div>
     );
 };

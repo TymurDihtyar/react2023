@@ -1,14 +1,17 @@
 import {carsService} from "../services/carsService";
-import {useDispatch} from "react-redux";
-import {oneCarAction} from "../redux/slices/oneCarSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {carsActions} from "../redux/slices/carSlice";
 
-const Car = ({item, refresh}) => {
+
+const Car = ({item}) => {
     const {id, brand, price, year} = item
+
+    const {triger} = useSelector(state => state.cars)
     const dispatch = useDispatch();
 
     const del = (id) => {
         carsService.delete(id)
-        refresh()
+        dispatch(carsActions.setTriger(!triger))
     }
 
     return (
@@ -17,7 +20,7 @@ const Car = ({item, refresh}) => {
             <div>brand:{brand}</div>
             <div>price:{price}</div>
             <div>year:{year}</div>
-            <button onClick={()=> dispatch(oneCarAction.setOneCar(item))}>update</button>
+            <button onClick={()=> dispatch(carsActions.setOneCar(item))}>update</button>
             <button onClick={() => del(id)}>delete</button>
             <hr/>
         </div>
