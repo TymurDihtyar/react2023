@@ -8,12 +8,13 @@ import {carValidator} from "../carValidator/carValidator";
 import {carsActions} from "../redux/slices/carSlice";
 
 const CarForm = () => {
+    const {updateCar, triger} = useSelector(state => state.cars);
+    const dispatch = useDispatch();
+
     const {reset, handleSubmit, register, formState: {errors, isValid}, setValue} = useForm({
         mode: "all",
         resolver: joiResolver(carValidator)
     })
-    const {updateCar, triger} = useSelector(state => state.cars);
-    const dispatch = useDispatch();
 
     useEffect(() => {
         if (updateCar) {
