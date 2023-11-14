@@ -1,7 +1,10 @@
 import {carsService} from "../services/carsService";
+import {useDispatch} from "react-redux";
+import {oneCarAction} from "../redux/slices/oneCarSlice";
 
-const Car = ({item, refresh, setCarForUpdate}) => {
+const Car = ({item, refresh}) => {
     const {id, brand, price, year} = item
+    const dispatch = useDispatch();
 
     const del = (id) => {
         carsService.delete(id)
@@ -14,7 +17,7 @@ const Car = ({item, refresh, setCarForUpdate}) => {
             <div>brand:{brand}</div>
             <div>price:{price}</div>
             <div>year:{year}</div>
-            <button onClick={()=> setCarForUpdate(item)}>update</button>
+            <button onClick={()=> dispatch(oneCarAction.setOneCar(item))}>update</button>
             <button onClick={() => del(id)}>delete</button>
             <hr/>
         </div>
