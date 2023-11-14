@@ -6,10 +6,11 @@ import {carsActions} from "../redux/slices/carSlice";
 const Car = ({item}) => {
     const {id, brand, price, year} = item
 
-    const {triger} = useSelector(state => state.cars)
     const dispatch = useDispatch();
-    const del = (id) => {
-        carsService.delete(id)
+    const {triger} = useSelector(state => state.cars)
+
+    const del = (idCar) => {
+        carsService.delete(idCar)
         dispatch(carsActions.setTriger(!triger))
     }
 
