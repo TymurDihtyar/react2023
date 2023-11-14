@@ -9,8 +9,8 @@ const Car = ({item}) => {
     const dispatch = useDispatch();
     const {triger} = useSelector(state => state.cars)
 
-    const del = (idCar) => {
-        carsService.delete(idCar)
+    const del = async (idCar) => {
+       await carsService.delete(idCar)
         dispatch(carsActions.setTriger(!triger))
     }
 
