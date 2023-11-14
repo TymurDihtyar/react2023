@@ -1,7 +1,8 @@
 import {useEffect} from "react";
-import {carsService} from "../services/carsService";
-import {Cars} from "./Cars";
 import {useDispatch, useSelector} from "react-redux";
+
+import {Cars} from "./Cars";
+import {carsService} from "../services/carsService";
 import {carsActions} from "../redux/slices/carSlice";
 
 const CarsConteiner = () => {

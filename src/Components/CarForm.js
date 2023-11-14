@@ -1,10 +1,10 @@
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
 
 import {carsService} from "../services/carsService";
 import {carValidator} from "../carValidator/carValidator";
-import {useDispatch, useSelector} from "react-redux";
 import {carsActions} from "../redux/slices/carSlice";
 
 const CarForm = () => {
@@ -12,16 +12,16 @@ const CarForm = () => {
         mode: "all",
         resolver: joiResolver(carValidator)
     })
-    const {oneCar, triger} = useSelector(state => state.cars);
+    const {updateCar, triger} = useSelector(state => state.cars);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (oneCar) {
-            setValue('brand', oneCar.brand, {shouldValidate: true})
-            setValue('price', oneCar.price, {shouldValidate: true})
-            setValue('year', oneCar.year, {shouldValidate: true})
+        if (updateCar) {
+            setValue('brand', updateCar.brand, {shouldValidate: true})
+            setValue('price', updateCar.price, {shouldValidate: true})
+            setValue('year', updateCar.year, {shouldValidate: true})
         }
-    }, [oneCar, setValue]);
+    }, [updateCar, setValue]);
 
     const save = async (car) => {
         await carsService.create(car)
@@ -29,19 +29,19 @@ const CarForm = () => {
         reset()
     }
     const update = async (car) => {
-        await carsService.update(oneCar.id, car)
+        await carsService.update(updateCar.id, car)
         dispatch(carsActions.setTriger(!triger))
-        dispatch(carsActions.setOneCar(null))
+        dispatch(carsActions.setUpdateCar(null))
         reset()
     }
 
     return (
         <>
-            <form onSubmit={handleSubmit(oneCar ? update : save)}>
+            <form onSubmit={handleSubmit(updateCar ? update : save)}>
                 <input type="text" placeholder={'brand'}{...register('brand')}/>
                 <input type="text" placeholder={'price'}{...register('price', {valueAsNumber: true})}/>
                 <input type="text" placeholder={'year'}{...register('year', {valueAsNumber: true})}/>
-                <button disabled={!isValid}>{oneCar ? 'update' : 'save'}</button>
+                <button disabled={!isValid}>{updateCar ? 'update' : 'save'}</button>
             </form>
             {errors.brand && <div>{errors.brand.message}</div>}
             {errors.price && <div>{errors.price.message}</div>}
