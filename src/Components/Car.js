@@ -2,7 +2,6 @@ import {carsService} from "../services/carsService";
 import {useDispatch, useSelector} from "react-redux";
 import {carsActions} from "../redux/slices/carSlice";
 
-
 const Car = ({item}) => {
     const {id, brand, price, year} = item
 

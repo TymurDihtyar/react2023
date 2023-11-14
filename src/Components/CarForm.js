@@ -31,6 +31,7 @@ const CarForm = () => {
     const update = async (car) => {
         await carsService.update(oneCar.id, car)
         dispatch(carsActions.setTriger(!triger))
+        dispatch(carsActions.setOneCar(null))
         reset()
     }
 
