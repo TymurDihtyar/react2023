@@ -1,4 +1,5 @@
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+
 import {carActions} from "../redux/slices/carSlice";
 import {carService} from "../services";
 

@@ -7,3 +7,5 @@ const carValidator = Joi.object({
     price: Joi.number().min(0).max(1_000_000).required(),
     year: Joi.number().min(1990).max(new Date().getFullYear()).required()
 })
+
+export {carValidator}

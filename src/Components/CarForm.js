@@ -1,14 +1,17 @@
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
-import {carService} from "../services";
 import {useDispatch, useSelector} from "react-redux";
-import {carActions} from "../redux/slices/carSlice";
 import {useEffect} from "react";
+
+import {carService} from "../services";
+import {carActions} from "../redux/slices/carSlice";
+import {carValidator} from "../validators/carValidator";
+
 
 const CarForm = () => {
     const {reset, handleSubmit, register, formState: {errors, isValid}, setValue} = useForm({
         mode: "all",
-        resolver: joiResolver()
+        resolver: joiResolver(carValidator)
     })
     const dispatch = useDispatch()
     const {updateCar} = useSelector(state => state.forCar)
@@ -30,6 +33,7 @@ const CarForm = () => {
     const update = async (updCar) => {
         await carService.update(updateCar.id, updCar)
         dispatch(carActions.setTriger())
+        dispatch(carActions.setUpdateCar(null))
         reset()
     }
 
@@ -41,7 +45,7 @@ const CarForm = () => {
             {errors.price && <div>{errors.price.message}</div>}
             <input type="text" placeholder={'year'} {...register('year')}/>
             {errors.year && <div>{errors.year.message}</div>}
-            <button disabled={isValid}>{updateCar ? 'update' : 'save'}</button>
+            <button disabled={!isValid}>{updateCar ? 'update' : 'save'}</button>
         </form>
     );
 };
