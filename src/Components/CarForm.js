@@ -4,8 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 
 import {carService} from "../services";
-import {carActions} from "../redux/slices/carSlice";
-import {carValidator} from "../validators/carValidator";
+import {carActions} from "../redux/slices";
+import {carValidator} from "../validators";
 
 
 const CarForm = () => {

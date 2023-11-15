@@ -1,6 +1,6 @@
 import {useDispatch} from "react-redux";
 
-import {carActions} from "../redux/slices/carSlice";
+import {carActions} from "../redux/slices";
 import {carService} from "../services";
 
 const Car = ({item}) => {
