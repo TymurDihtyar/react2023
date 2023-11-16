@@ -10,10 +10,6 @@ const EpisodePage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        setQuery({page: '1'})
-    }, []);
-
-    useEffect(() => {
         dispatch(episodeActions.getAllEpisodes({page}))
     }, [page, dispatch]);
 
