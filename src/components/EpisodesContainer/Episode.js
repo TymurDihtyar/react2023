@@ -1,7 +1,10 @@
-const Episode = () => {
+const Episode = ({item}) => {
+    const {id, name, episode} = item
     return (
         <div>
-
+            <div>id: {id}</div>
+            <div>name: {name}</div>
+            <div>episode: {episode}</div>
         </div>
     );
 };

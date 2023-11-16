@@ -5,20 +5,17 @@ import {episodeActions} from "../redux/slices/episodeSlice";
 import {useSearchParams} from "react-router-dom";
 
 const EpisodePage = () => {
-    const {qery, setQery} = useSearchParams('1')
-    const pages = qery.get('page')
-    const {episodes, prevPage, nextPage} = useSelector(state => state.episodes)
+    const [query, setQuery] = useSearchParams({page: '1'});
+    const page = query.get('page')
     const dispatch = useDispatch();
 
-
-
     useEffect(() => {
-        dispatch(episodeActions.getAllEpisodes({page:pages}))
+        setQuery({page: '1'})
     }, [dispatch]);
 
-    console.log(episodes);
-    console.log(prevPage);
-    console.log(nextPage);
+    useEffect(() => {
+        dispatch(episodeActions.getAllEpisodes({page}))
+    }, [page, dispatch]);
 
     return (
         <div>
