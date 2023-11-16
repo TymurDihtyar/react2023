@@ -1,7 +1,8 @@
-import css from './Episode.module.css'
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {episodeActions} from "../../redux/slices/episodeSlice";
+
+import css from './Episode.module.css'
+import {episodeActions} from "../../../redux";
 
 const Episode = ({item}) => {
     const {id, name, episode} = item;

@@ -1,5 +1,6 @@
-import css from './Pagination.module.css'
 import {useSelector} from "react-redux";
+
+import css from './Pagination.module.css'
 
 const Paginatin = ({setQuery}) => {
     const {prevPage, nextPage} = useSelector(state => state.episodes)

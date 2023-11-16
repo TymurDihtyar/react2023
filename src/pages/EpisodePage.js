@@ -1,9 +1,9 @@
-import {Episodes} from "../components/EpisodesContainer";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import {episodeActions} from "../redux/slices/episodeSlice";
+import {episodeActions} from "../redux";
 import {useSearchParams} from "react-router-dom";
-import {Paginatin} from "../components/PadinationContainer/Paginatin";
+
+import {Episodes, Paginatin} from "../components";
 
 const EpisodePage = () => {
     const [query, setQuery] = useSearchParams({page: '1'});

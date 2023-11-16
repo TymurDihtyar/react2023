@@ -1,8 +1,9 @@
-import {Characters} from "../components/CharactersContainer";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import {characterActions} from "../redux/slices/characterSlice";
 import {useParams} from "react-router-dom";
+import {characterActions} from "../redux";
+
+import {Characters} from "../components";
 
 const CharactersPage = () => {
     const {ids} = useParams()

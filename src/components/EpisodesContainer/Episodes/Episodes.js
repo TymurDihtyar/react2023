@@ -1,7 +1,7 @@
-import {Episode} from "./Episode";
 import {useSelector} from "react-redux";
 
 import css from './Episodes.module.css'
+import {Episode} from "../Episode";
 
 const Episodes = () => {
     const {episodes} = useSelector(state => state.episodes)
