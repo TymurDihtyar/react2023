@@ -2,7 +2,6 @@ import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {episodeActions} from "../redux";
 import {useSearchParams} from "react-router-dom";
-
 import {Episodes, Paginatin} from "../components";
 
 const EpisodePage = () => {
@@ -26,4 +25,4 @@ const EpisodePage = () => {
     );
 };
 
-export {EpisodePage};
+export {EpisodePage}
