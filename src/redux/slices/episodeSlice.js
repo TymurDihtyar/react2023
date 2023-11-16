@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {episodeService} from "../../services/episodeService";
+import {episodeService} from "../../services";
 
 let initialState = {
     episodes: [],

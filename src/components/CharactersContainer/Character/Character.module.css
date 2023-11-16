@@ -10,3 +10,6 @@
     padding: 20px;
     box-sizing: border-box;
 }
+.Character img {
+    width: 100%;
+}
