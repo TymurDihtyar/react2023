@@ -1,8 +1,8 @@
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {useParams} from "react-router-dom";
-import {characterActions} from "../redux";
 
+import {characterActions} from "../redux";
 import {Characters} from "../components";
 
 const CharactersPage = () => {
