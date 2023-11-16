@@ -7,7 +7,7 @@ const Episodes = () => {
 
     return (
         <div>
-            {episodes.map(item => <Episode key={item.key} item={item}/>)}
+            {episodes.map(item => <Episode key={item.id} item={item}/>)}
         </div>
     );
 };
