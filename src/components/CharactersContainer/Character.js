@@ -1,4 +1,4 @@
-const Character = () => {
+const Character = ({item}) => {
     return (
         <div>
 
