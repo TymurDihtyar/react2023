@@ -1,9 +1,9 @@
-import {Character} from "../Character/Character";
 import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 import css from './Characters.module.css'
-import {useNavigate} from "react-router-dom";
-import {episodeActions} from "../../../redux/slices/episodeSlice";
+import {Character} from "../Character";
+import {episodeActions} from "../../../redux";
 
 const Characters = () => {
     const {characters} = useSelector(state => state.character);
