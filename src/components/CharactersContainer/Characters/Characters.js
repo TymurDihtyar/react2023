@@ -12,7 +12,7 @@ const Characters = () => {
 
     const back = () => {
         dispatch(episodeActions.setEpisodeName(null));
-        navigate('/episodes');
+        navigate(-1);
     }
 
     return (
