@@ -1,8 +1,11 @@
 import css from './Header.module.css'
+import {useSelector} from "react-redux";
 const Header = () => {
+    const {episodeName} = useSelector(state => state.episodes)
+
     return (
         <div className={css.Header}>
-            <div>Rick & Morty</div>
+            <div>{episodeName ? `${episodeName}` : 'Rick & Morty'}</div>
         </div>
     );
 };

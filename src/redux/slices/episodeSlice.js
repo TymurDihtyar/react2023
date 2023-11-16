@@ -3,6 +3,7 @@ import {episodeService} from "../../services/episodeService";
 
 let initialState = {
     episodes: [],
+    episodeName: null,
     prevPage: null,
     nextPage: null,
     isLoading: null,
@@ -24,7 +25,11 @@ const getAllEpisodes = createAsyncThunk(
 const EpisodeSlice = createSlice({
     name: 'EpisodeSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setEpisodeName: (state, action) => {
+            state.episodeName = action.payload
+        }
+    },
     extraReducers: builder =>
         builder
             .addCase(getAllEpisodes.fulfilled, (state, action) => {
