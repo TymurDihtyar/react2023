@@ -42,7 +42,7 @@ const EpisodeSlice = createSlice({
                 state.errors = null
             })
             .addCase(getAllEpisodes.rejected, (state, action) => {
-                state.isLoading = false
+                state.isLoading = falsey
                 state.errors = action.payload
             })
             .addCase(getAllEpisodes.pending, state => {
